@@ -21,3 +21,6 @@ npm-debug.log*
 # Virtual environment
 venv/
 .env
+
+
+.env
