@@ -1,5 +1,6 @@
 import uuid
-
+from datetime import datetime, timedelta
+from django.utils import timezone
 
 
 def get_random_code():
@@ -9,3 +10,5 @@ def get_random_code():
     """
     return str(uuid.uuid4()).split("-")[-1]
 
+def get_default_expected_delivery_date():
+    return timezone.now() + timedelta(days=3)

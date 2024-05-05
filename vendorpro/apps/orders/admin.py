@@ -8,7 +8,6 @@ class PurchaseOrderAdmin(admin.ModelAdmin):
     list_display = [
         "po_number",
         "vendor",
-        "delivery_date",
         "acknowledgment_date",
         "status",
         "quality_rating",
