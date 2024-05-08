@@ -94,7 +94,6 @@ To set up Celery for periodic task execution in VendorPro, follow these addition
    CELERY_ACCEPT_CONTENT = ["application/json"]
    CELERY_TASK_SERIALIZER = "json"
    CELERY_RESULT_SERIALIZER = "json"
-   CELERY_TIMEZONE = "Africa/Lagos"
    
    CELERY_IMPORTS = (
        'authentication.tasks',  # The module containing your Celery tasks
