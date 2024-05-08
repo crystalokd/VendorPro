@@ -178,7 +178,6 @@ CELERY_RESULT_BACKEND = 'redis://localhost:6379'
 ELERY_ACCEPT_CONTENT = ["application/json"]
 CELERY_TASK_SERIALIZER = "json"
 CELERY_RESULT_SERIALIZER = "json"
-CELERY_TIMEZONE = "Africa/Lagos"
 CELERY_IMPORTS = (
     'vendors.tasks',  # The module containing your Celery tasks
 )
