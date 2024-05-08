@@ -7,8 +7,7 @@ class PurchaseOrderSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-# serializers.py
-from rest_framework import serializers
+
 
 class AcknowledgePurchaseOrderSerializer(serializers.Serializer):
     acknowledgment_date = serializers.DateTimeField()

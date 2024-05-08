@@ -31,8 +31,3 @@ class PurchaseOrder(models.Model):
 
 
 
-@receiver(post_save, sender=PurchaseOrder)
-def my_model_post_save_handler(sender, instance, created, **kwargs):
-    if created:
-        # Do something when a new instance of MyModel is created
-        pass

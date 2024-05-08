@@ -11,12 +11,6 @@ class PurchaseOrderViewSet(viewsets.ModelViewSet):
     serializer_class = PurchaseOrderSerializer
 
 
-class PurchaseOrderAcknowledgeView(generics.UpdateAPIView):
-    queryset = PurchaseOrder.objects.all()
-    serializer_class = PurchaseOrderSerializer
-
-
-
 
 @api_view(['POST'])
 def acknowledge_purchase_order(request, po_id):
@@ -34,7 +28,6 @@ def acknowledge_purchase_order(request, po_id):
             return Response(status=status.HTTP_200_OK)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
 
 
 

@@ -13,6 +13,8 @@ import os
 import sys
 from pathlib import Path
 
+from celery.schedules import crontab
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -164,3 +166,19 @@ SPECTACULAR_SETTINGS = {
     "SERVE_INCLUDE_SCHEMA": False,
     # OTHER SETTINGS
 }
+
+CELERY_BEAT_SCHEDULE = {
+    'save_vendor_performance': {
+        'task': 'vendors.tasks.save_vendor_historical_performance',
+        'schedule': crontab(hour=0, minute=0),  # Run daily at midnight
+    },
+}
+CELERY_BROKER_URL = 'redis://localhost:6379'  # Replace with your message broker URL
+CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+ELERY_ACCEPT_CONTENT = ["application/json"]
+CELERY_TASK_SERIALIZER = "json"
+CELERY_RESULT_SERIALIZER = "json"
+CELERY_TIMEZONE = "Africa/Lagos"
+CELERY_IMPORTS = (
+    'vendors.tasks',  # The module containing your Celery tasks
+)

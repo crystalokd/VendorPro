@@ -10,5 +10,4 @@ router.register(r'purchase_order', PurchaseOrderViewSet)
 
 urlpatterns = [
     path('purchase_order/<int:po_id>/acknowledge/', acknowledge_purchase_order),
-    path("<uuid:pk>/acknowledge", PurchaseOrderAcknowledgeView.as_view(), name="purchase-order-acknowledge"),
 ] + router.urls
