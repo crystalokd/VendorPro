@@ -12,7 +12,6 @@ The integration of Celery into VendorPro enhances the functionality and reliabil
 
 ## Easy to miss Feature: Metric calculations
 
-## Easy-to-Miss Feature: Metric Calculations - Fulfilment Rate and Average Response Time
 
 ### Fulfilment Rate:
 One feature that might be overlooked by other developers is the calculation of the fulfilment rate upon any change in the Purchase Order (PO) status. This feature is critical for providing real-time insights into vendor performance. By calculating the fulfilment rate dynamically, developers ensure that the system always reflects the latest status of POs issued to vendors. The logic behind this calculation is straightforward: it involves dividing the number of successfully fulfilled POs (those with a status of 'completed' and without any issues) by the total number of POs issued to the vendor.
