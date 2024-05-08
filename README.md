@@ -115,3 +115,37 @@ To set up Celery for periodic task execution in VendorPro, follow these addition
    ```
 
 With Celery configured, periodic tasks such as updating historical performance data will be executed automatically according to the specified schedule.
+
+
+
+### Using the API Endpoints with Swagger Documentation
+
+1. **Vendor Management:**
+
+   - **Create a New Vendor:** `POST /api/vendors/`
+   - **List All Vendors:** `GET /api/vendors/`
+   - **Retrieve a Specific Vendor's Details:** `GET /api/vendors/{vendor_id}/`
+   - **Update a Vendor's Details:** `PUT /api/vendors/{vendor_id}/`
+   - **Delete a Vendor:** `DELETE /api/vendors/{vendor_id}/`
+
+2. **Purchase Order Management:**
+
+   - **Create a New Purchase Order:** `POST /api/purchase-orders/`
+   - **List All Purchase Orders:** `GET /api/purchase-orders/`
+   - **Retrieve a Specific Purchase Order's Details:** `GET /api/purchase-orders/{order_id}/`
+   - **Update a Purchase Order's Details:** `PUT /api/purchase-orders/{order_id}/`
+   - **Delete a Purchase Order:** `DELETE /api/purchase-orders/{order_id}/`
+
+3. **Vendor Performance Metrics:**
+
+   - **Retrieve Vendor Performance Metrics:** `GET /api/vendors/{vendor_id}/performance/`
+
+### Accessing Swagger Documentation
+
+To explore and interact with the API endpoints using Swagger documentation, access the `/docs` path in your browser. For example:
+
+```
+http://127.0.0.1:8000/docs/
+```
+
+Swagger UI provides a user-friendly interface to browse the API endpoints, execute requests, and view responses. It also includes detailed descriptions and examples for each endpoint, making it easy to understand and utilize the VendorPro API.
